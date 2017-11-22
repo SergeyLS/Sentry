@@ -16,15 +16,14 @@ class CoreDataManager {
     // MARK: - Singleton
     //==================================================
     static let shared = CoreDataManager()
-    private init() {
-    }
+    private init() { }
     
     //==================================================
     // MARK: - Properties
     //==================================================
     var viewContext: NSManagedObjectContext {
         get {
-            let resultContext = persistentContainer.viewContext
+            let resultContext = self.persistentContainer.viewContext
             resultContext.automaticallyMergesChangesFromParent = true
             return resultContext
         }
@@ -45,9 +44,10 @@ class CoreDataManager {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Model")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
+        // MARK: Все строковые константы должны быть вынесены в отдельное место, которое легко конфигурировать в случае изменений в проекте. Разыскивать по разным файлам, когда проект уже вырос - неблагодарное дело.
+        let container = NSPersistentContainer(name: Constants.Storage.persistentModelName)
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 
@@ -59,9 +59,10 @@ class CoreDataManager {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                // MARK: Вот как раз то место, где нужно использовать Sentry в проекте :) Вещания в никуда (print и тп) лучше избегать
+                fatalError("Unresolved error \(error), \((error as NSError).userInfo)")
             }
-        })
+        }
         return container
     }()
     
@@ -72,30 +73,36 @@ class CoreDataManager {
     //==================================================
     func saveContext () {
         let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+        
+        // MARK: Идеальное место для применения guard
+        guard context.hasChanges else {
+            return
+        }
+        
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            // MARK: Сюда тоже нужно добавить обработку в Sentry
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
     
     public func save(context: NSManagedObjectContext) {
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+        guard context.hasChanges else {
+            return
+        }
+        
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            // MARK: Сюда тоже нужно добавить обработку в Sentry
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
-    
-    
 }

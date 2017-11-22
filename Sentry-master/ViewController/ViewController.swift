@@ -10,36 +10,32 @@ import UIKit
 import Sentry
 
 class ViewController: UIViewController {
+    
+    let zeroSegue = "ziro"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    // MARK: Понимаю, что проект тестовый, но названия методам лучше всегда привыкать давать содержательные
     @IBAction func button1Action(_ sender: UIButton) {
-        performSegue(withIdentifier: "ziro", sender: nil)
+        // MARK: Везде, где можно рекомендую использовать self., чтобы не путать при чтении кода с локально обьявленными переменными и методами. Это уже скорее как привычка должна быть.
+        // MARK: Аналогично - строковый литерал затесался здесь, для сегвеев можно просто в рамках данного класса прописывать
+        self.performSegue(withIdentifier: self.zeroSegue, sender: nil)
     }
-    
     
     @IBAction func button2Action(_ sender: UIButton) {
         Client.shared?.crash()
     }
     
-    
     @IBAction func button3Action(_ sender: UIButton) {
+        // MARK: Самый главный момент - взаимодействия напрямую с конкретным Storage не должно быть в контроллере. Нужно либо выносить в сервис, либо создавать фабрику, либо выносить в ViewModel. Должно быть что-то в духе someService.addUser(name: "123"). Аналогично в методе ниже
         let moc = CoreDataManager.shared.viewContext
         if let newUser = User(moc: moc, entityName: "123") {
             newUser.name = "123"
             CoreDataManager.shared.saveContext()
         }
     }
-    
     
     @IBAction func button4Action(_ sender: UIButton) {
         let moc1 = CoreDataManager.shared.viewContext
@@ -55,7 +51,4 @@ class ViewController: UIViewController {
         CoreDataManager.shared.save(context: moc1)
         CoreDataManager.shared.save(context: moc2)
     }
-    
-    
 }
-

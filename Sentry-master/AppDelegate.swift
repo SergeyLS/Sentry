@@ -8,7 +8,8 @@
 
 import UIKit
 import Sentry
-import CoreData
+// MARK: Здесь CoreData не нужна
+// import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,14 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Create a Sentry client and start crash handler
+        // MARK: Строковый литерал - выносим в Constants(или подобную реализацию) или info.plist (для таких вещей как пароль - идеальный вариант второй + добавлять данный .plist в .gitignore, чтобы приватный пароль не гулял по репозиторию. Пока вынес в Constants
         do {
-            Client.shared = try Client(dsn: "https://2854f633d27849da99c64621ed7be889:5827d41f6d694a668975f658d5d655dc@sentry.io/248484")
+            Client.shared = try Client(dsn: Constants.Sentry.dsn)
             try Client.shared?.startCrashHandler()
         } catch let error {
             print("\(error)")
             // Wrong DSN or KSCrash not installed
         }
-
         
         return true
     }

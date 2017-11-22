@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20BAB757F835025BF3C33BFB /* Pods_Sentry_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6177A3FA5877C681AB72E5F3 /* Pods_Sentry_master.framework */; };
+		B79E32431FC5DD4E0020CD20 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79E32421FC5DD4E0020CD20 /* Constants.swift */; };
 		F7023DCD1FC469220069041C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7023DCC1FC469220069041C /* AppDelegate.swift */; };
 		F7023DCF1FC469220069041C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7023DCE1FC469220069041C /* ViewController.swift */; };
 		F7023DD21FC469220069041C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7023DD01FC469220069041C /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		6177A3FA5877C681AB72E5F3 /* Pods_Sentry_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sentry_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D503D5EA67107B50E7E48E /* Pods-Sentry-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sentry-master/Pods-Sentry-master.debug.xcconfig"; sourceTree = "<group>"; };
 		A9E8BFD22556FB3924F8BC83 /* Pods-Sentry-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sentry-master/Pods-Sentry-master.release.xcconfig"; sourceTree = "<group>"; };
+		B79E32421FC5DD4E0020CD20 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F7023DC91FC469220069041C /* Sentry-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sentry-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7023DCC1FC469220069041C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7023DCE1FC469220069041C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */,
+				B79E32421FC5DD4E0020CD20 /* Constants.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				F736EFBF1FC4C92400DF3768 /* Model.xcdatamodeld in Sources */,
 				F736EFBC1FC4C8F400DF3768 /* Item+CoreDataProperties.swift in Sources */,
 				F736EFBA1FC4C8F400DF3768 /* Item+CoreDataClass.swift in Sources */,
+				B79E32431FC5DD4E0020CD20 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,8 +435,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UR2UCZHHPB;
-				INFOPLIST_FILE = "Sentry-master/Info.plist";
+				DEVELOPMENT_TEAM = RRP4H97K7M;
+				INFOPLIST_FILE = "Sentry-master/Resourses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SergeyLeskov.Sentry-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,8 +451,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UR2UCZHHPB;
-				INFOPLIST_FILE = "Sentry-master/Info.plist";
+				DEVELOPMENT_TEAM = RRP4H97K7M;
+				INFOPLIST_FILE = "Sentry-master/Resourses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SergeyLeskov.Sentry-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
