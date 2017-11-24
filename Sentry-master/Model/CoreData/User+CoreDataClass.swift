@@ -13,7 +13,7 @@ public class User: NSManagedObject {
     
      static let type = "User"
     
-    convenience init? (moc: NSManagedObjectContext, entityName: String) {
+    convenience init? (entityName: String, moc: NSManagedObjectContext = CoreDataManager.shared.viewContext) {
         guard let tempEntity = NSEntityDescription.entity(forEntityName: entityName, in: moc) else {
             fatalError("Could not initialize \(entityName)")
             return nil

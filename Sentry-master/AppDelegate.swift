@@ -8,8 +8,6 @@
 
 import UIKit
 import Sentry
-// MARK: Здесь CoreData не нужна
-// import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
