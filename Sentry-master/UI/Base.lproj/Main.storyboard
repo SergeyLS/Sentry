@@ -50,9 +50,19 @@
                                     <action selector="button4Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvW-5f-E8b"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntP-xD-c31">
+                                <rect key="frame" x="20" y="240" width="335" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Factory Method "/>
+                                <connections>
+                                    <action selector="button5Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgT-RG-XqC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ntP-xD-c31" firstAttribute="top" secondItem="Cyz-Br-Srn" secondAttribute="bottom" constant="20" id="2PM-Rl-rrk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ntP-xD-c31" secondAttribute="trailing" constant="20" id="8BZ-It-ZO4"/>
                             <constraint firstItem="SPO-U7-O51" firstAttribute="top" secondItem="raY-3z-gJe" secondAttribute="bottom" constant="20" id="ASb-ce-REB"/>
                             <constraint firstItem="SyK-aN-MPT" firstAttribute="top" secondItem="SPO-U7-O51" secondAttribute="bottom" constant="20" id="BNA-iI-cRt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SyK-aN-MPT" secondAttribute="trailing" constant="20" id="ED4-fn-z4S"/>
@@ -67,6 +77,7 @@
                             <constraint firstItem="Cyz-Br-Srn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kUd-cy-Ns3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="raY-3z-gJe" secondAttribute="trailing" constant="20" id="mqn-Ys-ZWm"/>
                             <constraint firstItem="SPO-U7-O51" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oLt-pP-Ci6"/>
+                            <constraint firstItem="ntP-xD-c31" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qe3-j2-fJ5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

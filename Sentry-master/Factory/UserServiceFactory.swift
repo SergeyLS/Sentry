@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sergey Leskov. All rights reserved.
 //
 
+
 class UserServiceFactory {
     
     //==================================================
@@ -18,8 +19,10 @@ class UserServiceFactory {
     //==================================================
     // MARK: - Method(s)
     //==================================================
-    func createUserService()  {
+    func createUserService(name: String) -> UserProtocol? {
         
+        //for CoreData
+        return CoreDataUserService(name: name)
     }
     
 }

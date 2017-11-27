@@ -22,6 +22,7 @@
 		F736EFBC1FC4C8F400DF3768 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */; };
 		F736EFBF1FC4C92400DF3768 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F736EFBD1FC4C92400DF3768 /* Model.xcdatamodeld */; };
 		F769117D1FC4C01C002CBCD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */; };
+		F777C41E1FCCBD0A005EB013 /* CoreDataUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F736EFBE1FC4C92400DF3768 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				B79E32411FC5DB1E0020CD20 /* Model */,
-				F7127AAB1FC81C4E00BE2087 /* Protocol */,
 				F7127AAE1FC81CBE00BE2087 /* Factory */,
 				B79E32401FC5DB110020CD20 /* Service */,
 				B79E323D1FC5DA360020CD20 /* ViewController */,
@@ -152,18 +153,12 @@
 			path = "Sentry-master";
 			sourceTree = "<group>";
 		};
-		F7127AAB1FC81C4E00BE2087 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				F7127AAC1FC81C8800BE2087 /* UserService.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		F7127AAE1FC81CBE00BE2087 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				F7127AAC1FC81C8800BE2087 /* UserService.swift */,
 				F7127AAF1FC81CF300BE2087 /* UserServiceFactory.swift */,
+				F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -317,6 +312,7 @@
 				F769117D1FC4C01C002CBCD3 /* CoreDataManager.swift in Sources */,
 				F7127AB01FC81CF300BE2087 /* UserServiceFactory.swift in Sources */,
 				F736EFBF1FC4C92400DF3768 /* Model.xcdatamodeld in Sources */,
+				F777C41E1FCCBD0A005EB013 /* CoreDataUserService.swift in Sources */,
 				F7127AAD1FC81C8800BE2087 /* UserService.swift in Sources */,
 				F736EFBC1FC4C8F400DF3768 /* Item+CoreDataProperties.swift in Sources */,
 				F736EFBA1FC4C8F400DF3768 /* Item+CoreDataClass.swift in Sources */,

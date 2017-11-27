@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func button3Action(_ sender: UIButton) {
         // MARK: Самый главный момент - взаимодействия напрямую с конкретным Storage не должно быть в контроллере. Нужно либо выносить в сервис, либо создавать фабрику, либо выносить в ViewModel. Должно быть что-то в духе someService.addUser(name: "123"). Аналогично в методе ниже
         let moc = CoreDataManager.shared.viewContext
-        if let newUser = User(moc: moc, entityName: "123") {
+        if let newUser = User(entityName: "123", moc: moc) {
             newUser.name = "123"
             CoreDataManager.shared.saveContext()
         }
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         let moc1 = CoreDataManager.shared.viewContext
         let moc2 = CoreDataManager.shared.newBackgroundContext
         
-        guard let newUser = User(moc: moc1, entityName: User.type),
+        guard let newUser = User(entityName: User.type, moc: moc1),
             let  newItem = Item(moc: moc2) else {
             return
         }
@@ -51,4 +51,10 @@ class ViewController: UIViewController {
         CoreDataManager.shared.save(context: moc1)
         CoreDataManager.shared.save(context: moc2)
     }
+    
+    @IBAction func button5Action(_ sender: UIButton) {
+        let user = UserServiceFactory.shared.createUserService(name: "Sergey")
+        print(user?.firstName ?? "?")
+    }
+    
 }
