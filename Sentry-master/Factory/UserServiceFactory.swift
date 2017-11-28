@@ -19,10 +19,9 @@ class UserServiceFactory {
     //==================================================
     // MARK: - Method(s)
     //==================================================
-    func createUserService(name: String) -> UserProtocol? {
-        
-        //for CoreData
-        return CoreDataUserService(name: name)
+    func createUserService() -> UserService {
+        // For CoreData
+        return CoreDataUserService()
     }
     
 }

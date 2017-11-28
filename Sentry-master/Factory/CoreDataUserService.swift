@@ -8,20 +8,17 @@
 
 import Foundation
 
-class CoreDataUserService: UserProtocol  {
-    var firstName: String?
+class CoreDataUserService: UserService  {
+    private let context = CoreDataManager.shared.viewContext
     
-    init?(name: String) {
-        //if CoreData
-        let moc = CoreDataManager.shared.viewContext
+    init() { }
+    
+    func createUser(withName name: String) -> UserProtocol? {
+        guard let newUser = User(entityName: User.type, moc: self.context) else { return nil }
         
-        guard let newUser = User(entityName: User.type, moc: moc) else {
-            return nil
-        }
         newUser.name = name
-        CoreDataManager.shared.save(context: moc)
+        CoreDataManager.shared.save(context: self.context)
         
-        self.firstName = newUser.name
-        
+        return newUser
     }
 }

@@ -22,6 +22,17 @@ extension User {
 
 }
 
+extension User: UserProtocol {
+    var firstname: String {
+        get {
+            return self.name ?? ""
+        }
+        set(value) {
+            self.name = value
+        }
+    }
+}
+
 // MARK: Generated accessors for items
 extension User {
 

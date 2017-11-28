@@ -53,8 +53,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func button5Action(_ sender: UIButton) {
-        let user = UserServiceFactory.shared.createUserService(name: "Sergey")
-        print(user?.firstName ?? "?")
+        let userService = UserServiceFactory.shared.createUserService()
+        
+        let user = userService.createUser(withName: "User1")
+        print(user?.firstname ?? "?")
     }
     
 }

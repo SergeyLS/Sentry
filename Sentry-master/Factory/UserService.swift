@@ -8,31 +8,7 @@
 
 import Foundation
 
-typealias UserService = UserProtocol & UserCreatorProtocol
-
-protocol UserProtocol {
-    var firstName: String? { get set }
-//    var lastName: String { get }
-//    var fullName: String { get }
+protocol UserService {
+    func createUser(withName name: String) -> UserProtocol?
+    func deleteUser(withName name: String)
 }
-
-protocol UserCreatorProtocol {
-    static func createUser() -> UserProtocol
-}
-
-
-//extension NameProtocol {
-//    mutating func createUser(name: String)  {
-//
-//        guard let newUser = User(entityName: User.type) else {
-//            return
-//        }
-//
-//        newUser.name = name
-//
-//        self.firstName = name
-//
-//    }
-//}
-//
-//
