@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  Sentry-master
 //
-//  Created by Sergey Leskov on 11/21/17.
+//  Created by Sergey Leskov on 11/28/17.
 //  Copyright © 2017 Sergey Leskov. All rights reserved.
 //
 //
@@ -18,20 +18,12 @@ extension User {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var id: Int64
     @NSManaged public var items: NSSet?
 
 }
 
-extension User: UserProtocol {
-    var firstname: String {
-        get {
-            return self.name ?? ""
-        }
-        set(value) {
-            self.name = value
-        }
-    }
-}
+
 
 // MARK: Generated accessors for items
 extension User {

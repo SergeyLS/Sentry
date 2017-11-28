@@ -23,6 +23,7 @@
 		F736EFBC1FC4C8F400DF3768 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */; };
 		F736EFBF1FC4C92400DF3768 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F736EFBD1FC4C92400DF3768 /* Model.xcdatamodeld */; };
 		F769117D1FC4C01C002CBCD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */; };
+		F775D0B11FCE126700CECEC2 /* ItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F775D0B01FCE126700CECEC2 /* ItemProtocol.swift */; };
 		F777C41E1FCCBD0A005EB013 /* CoreDataUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F736EFBE1FC4C92400DF3768 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F775D0B01FCE126700CECEC2 /* ItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtocol.swift; sourceTree = "<group>"; };
 		F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 			children = (
 				F736EFB61FC4C8DE00DF3768 /* CoreData */,
 				B728BD361FCD5EA60074D4E0 /* UserProtocol.swift */,
+				F775D0B01FCE126700CECEC2 /* ItemProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				F7127AAD1FC81C8800BE2087 /* UserService.swift in Sources */,
 				F736EFBC1FC4C8F400DF3768 /* Item+CoreDataProperties.swift in Sources */,
 				F736EFBA1FC4C8F400DF3768 /* Item+CoreDataClass.swift in Sources */,
+				F775D0B11FCE126700CECEC2 /* ItemProtocol.swift in Sources */,
 				B79E32431FC5DD4E0020CD20 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

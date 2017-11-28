@@ -23,6 +23,25 @@ public class User: NSManagedObject {
         //name = "test"
         
     }
+}
 
 
+extension User: UserProtocol {
+    var userId: Int64 {
+        get {
+            return self.id
+        }
+        set {
+            self.id = newValue
+        }
+    }
+    
+    var userName: String {
+        get {
+            return self.name ?? ""
+        }
+        set(value) {
+            self.name = value
+        }
+    }
 }

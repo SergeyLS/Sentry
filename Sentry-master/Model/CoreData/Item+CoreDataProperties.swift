@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  Sentry-master
 //
-//  Created by Sergey Leskov on 11/21/17.
+//  Created by Sergey Leskov on 11/28/17.
 //  Copyright © 2017 Sergey Leskov. All rights reserved.
 //
 //
@@ -18,6 +18,7 @@ extension Item {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var id: Int64
     @NSManaged public var user: User?
 
 }
