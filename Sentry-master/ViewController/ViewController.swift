@@ -11,20 +11,29 @@ import Sentry
 
 class ViewController: UIViewController {
     
+    //==================================================
+    // MARK: - Stored Properties
+    //==================================================
     let zeroSegue = "ziro"
     let userService = UserServiceFactory.shared.createUserService()
     
+    //==================================================
+    // MARK: - General
+    //==================================================
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
     
+    
+    //==================================================
+    // MARK: - Action
+    //==================================================
     @IBAction func seagueButtonAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: self.zeroSegue, sender: nil)
     }
     
     @IBAction func crashButtonAction(_ sender: UIButton) {
-         Client.shared?.crash()
+        Client.shared?.crash()
     }
     
     
@@ -34,7 +43,7 @@ class ViewController: UIViewController {
         
         let user = userService.createUser(withName: "User\(countUsers + 1)", withId: Int64(countUsers) + 1)
         print(user?.userName ?? "?")
-
+        
     }
     
     
