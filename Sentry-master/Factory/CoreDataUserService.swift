@@ -33,7 +33,7 @@ class CoreDataUserService: UserService  {
     func createUser(withName name: String, withId id: Int) -> UserProtocol? {
         guard let newUser = User(entityName: User.type, moc: self.context) else { return nil }
         newUser.name = name
-        newUser.id = id
+        newUser.id = NSNumber(integerLiteral: id)
         CoreDataManager.shared.save(context: self.context)
         
         return newUser

@@ -29,10 +29,10 @@ public class User: NSManagedObject {
 extension User: UserProtocol {
     var userId: Int {
         get {
-            return self.id
+            return self.id.intValue
         }
         set {
-            self.id = newValue
+            self.id = NSNumber(integerLiteral: newValue)
         }
     }
     
