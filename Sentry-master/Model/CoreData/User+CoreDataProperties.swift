@@ -18,7 +18,7 @@ extension User {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var id: Int64
+    @NSManaged public var id: Int
     @NSManaged public var items: NSSet?
 
 }

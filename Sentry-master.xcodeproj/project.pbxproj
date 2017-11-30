@@ -15,6 +15,7 @@
 		F7023DD21FC469220069041C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7023DD01FC469220069041C /* Main.storyboard */; };
 		F7023DD41FC469220069041C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7023DD31FC469220069041C /* Assets.xcassets */; };
 		F7023DD71FC469220069041C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7023DD51FC469220069041C /* LaunchScreen.storyboard */; };
+		F7095BEE1FD030F4000B4B14 /* PrintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7095BED1FD030F4000B4B14 /* PrintManager.swift */; };
 		F7127AAD1FC81C8800BE2087 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7127AAC1FC81C8800BE2087 /* UserService.swift */; };
 		F7127AB01FC81CF300BE2087 /* UserServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7127AAF1FC81CF300BE2087 /* UserServiceFactory.swift */; };
 		F736EFB51FC4C48600DF3768 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EFB31FC4C48600DF3768 /* User+CoreDataClass.swift */; };
@@ -40,6 +41,7 @@
 		F7023DD31FC469220069041C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7023DD61FC469220069041C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7023DD81FC469220069041C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7095BED1FD030F4000B4B14 /* PrintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintManager.swift; sourceTree = "<group>"; };
 		F7127AAC1FC81C8800BE2087 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F7127AAF1FC81CF300BE2087 /* UserServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceFactory.swift; sourceTree = "<group>"; };
 		F736EFB31FC4C48600DF3768 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */,
 				B79E32421FC5DD4E0020CD20 /* Constants.swift */,
+				F7095BED1FD030F4000B4B14 /* PrintManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				F736EFBA1FC4C8F400DF3768 /* Item+CoreDataClass.swift in Sources */,
 				F775D0B11FCE126700CECEC2 /* ItemProtocol.swift in Sources */,
 				B79E32431FC5DD4E0020CD20 /* Constants.swift in Sources */,
+				F7095BEE1FD030F4000B4B14 /* PrintManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RRP4H97K7M;
+				DEVELOPMENT_TEAM = UR2UCZHHPB;
 				INFOPLIST_FILE = "Sentry-master/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SergeyLeskov.Sentry-master";
@@ -479,7 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RRP4H97K7M;
+				DEVELOPMENT_TEAM = UR2UCZHHPB;
 				INFOPLIST_FILE = "Sentry-master/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SergeyLeskov.Sentry-master";

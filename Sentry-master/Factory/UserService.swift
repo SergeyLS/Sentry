@@ -9,8 +9,8 @@
 import Foundation
 
 protocol UserService {
-    func createUser(withName name: String, withId: Int64) -> UserProtocol?
+    func createUser(withName name: String, withId: Int) -> UserProtocol?
     func deleteLastUser() -> Bool
-    func findUser(withId: Int64) -> UserProtocol?
+    func findUser(withId: Int) -> UserProtocol?
     func countUser() -> Int
 }

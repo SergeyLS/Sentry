@@ -10,7 +10,7 @@ import Foundation
 
 protocol ItemProtocol {
     var name: String { get set }
-    var id: Int64 { get set }
+    var id: Int { get set }
     
     var user: UserProtocol { get set }
 }

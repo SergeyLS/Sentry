@@ -11,5 +11,5 @@ import Foundation
 
 protocol UserProtocol {
     var userName: String { get set }
-    var userId: Int64 { get set }
+    var userId: Int { get set }
 }

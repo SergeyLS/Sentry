@@ -27,7 +27,7 @@ public class User: NSManagedObject {
 
 
 extension User: UserProtocol {
-    var userId: Int64 {
+    var userId: Int {
         get {
             return self.id
         }

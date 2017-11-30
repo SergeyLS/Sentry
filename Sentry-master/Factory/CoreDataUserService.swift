@@ -30,7 +30,7 @@ class CoreDataUserService: UserService  {
         return resultsArray.count
     }
     
-    func createUser(withName name: String, withId id: Int64) -> UserProtocol? {
+    func createUser(withName name: String, withId id: Int) -> UserProtocol? {
         guard let newUser = User(entityName: User.type, moc: self.context) else { return nil }
         newUser.name = name
         newUser.id = id
@@ -40,7 +40,7 @@ class CoreDataUserService: UserService  {
         
     }
     
-    func findUser(withId id: Int64) -> UserProtocol? {
+    func findUser(withId id: Int) -> UserProtocol? {
         
         return nil
     }

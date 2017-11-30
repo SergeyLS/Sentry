@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
         let countUsers = userService.countUser()
         
-        let user = userService.createUser(withName: "User\(countUsers + 1)", withId: Int64(countUsers) + 1)
+        let user = userService.createUser(withName: "User\(countUsers + 1)", withId: Int(countUsers) + 1)
         print(user?.userName ?? "?")
         
     }
@@ -50,6 +50,11 @@ class ViewController: UIViewController {
     @IBAction func deleteUserButtonAction(_ sender: UIButton) {
         let isDelete = userService.deleteLastUser()
         print(isDelete)
+    }
+    
+    
+    @IBAction func testPrintButtonAction(_ sender: UIButton) {
+        myPrint(text: "test")
     }
     
     
