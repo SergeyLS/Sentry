@@ -53,24 +53,35 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuU-3u-MNM">
                                 <rect key="frame" x="20" y="240" width="335" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Test print"/>
+                                <state key="normal" title="Test print normal"/>
                                 <connections>
-                                    <action selector="testPrintButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8T-oB-g9t"/>
+                                    <action selector="printNormalButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDt-w2-oBt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-OH-1eA">
+                                <rect key="frame" x="20" y="290" width="335" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Test print error"/>
+                                <connections>
+                                    <action selector="printErrorButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hy-I3-Y6n"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FuU-3u-MNM" secondAttribute="trailing" constant="20" id="59Z-Sh-Vl0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rvJ-OH-1eA" secondAttribute="trailing" constant="20" id="9g7-Ol-Llw"/>
                             <constraint firstItem="SPO-U7-O51" firstAttribute="top" secondItem="raY-3z-gJe" secondAttribute="bottom" constant="20" id="ASb-ce-REB"/>
                             <constraint firstItem="SyK-aN-MPT" firstAttribute="top" secondItem="SPO-U7-O51" secondAttribute="bottom" constant="20" id="BNA-iI-cRt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SyK-aN-MPT" secondAttribute="trailing" constant="20" id="ED4-fn-z4S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cyz-Br-Srn" secondAttribute="trailing" constant="20" id="FTV-aJ-ii4"/>
+                            <constraint firstItem="rvJ-OH-1eA" firstAttribute="top" secondItem="FuU-3u-MNM" secondAttribute="bottom" constant="20" id="IMo-dX-f6o"/>
                             <constraint firstItem="raY-3z-gJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ItL-Zk-wcg"/>
                             <constraint firstItem="raY-3z-gJe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JUR-CR-gMc"/>
                             <constraint firstItem="SPO-U7-O51" firstAttribute="width" secondItem="raY-3z-gJe" secondAttribute="width" id="LIC-EV-eIs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPO-U7-O51" secondAttribute="trailing" constant="20" id="P0d-It-Kxr"/>
                             <constraint firstItem="Cyz-Br-Srn" firstAttribute="top" secondItem="SyK-aN-MPT" secondAttribute="bottom" constant="20" id="QVE-Og-9C1"/>
+                            <constraint firstItem="rvJ-OH-1eA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZcY-kc-Xl2"/>
                             <constraint firstItem="SyK-aN-MPT" firstAttribute="width" secondItem="raY-3z-gJe" secondAttribute="width" id="dRS-Vg-SVr"/>
                             <constraint firstItem="SyK-aN-MPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gfK-py-IHd"/>
                             <constraint firstItem="Cyz-Br-Srn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kUd-cy-Ns3"/>

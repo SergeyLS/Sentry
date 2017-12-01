@@ -10,7 +10,7 @@ import Foundation
 
 protocol UserService {
     func createUser(withName name: String, withId: Int) -> UserProtocol?
-    func deleteLastUser() -> Bool
+    func deleteLastUser() -> ActionResult<Any>
     func findUser(withId: Int) -> UserProtocol?
     func countUser() -> Int
 }

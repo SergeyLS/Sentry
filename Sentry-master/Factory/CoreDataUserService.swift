@@ -45,20 +45,20 @@ class CoreDataUserService: UserService  {
         return nil
     }
     
-    func deleteLastUser() -> Bool {
+    func deleteLastUser() -> ActionResult<Any> {
         let request = NSFetchRequest<User>(entityName: User.type)
         guard let resultsArray = try? self.context.fetch(request) else {
-            return false
+            return ActionResult.failure(ErrorsCoreData.errorRequest)
         }
         
         guard let lastRecord = resultsArray.last else {
-            return false
+            return ActionResult.failure(ErrorsCoreData.errorArray)
         }
         
         self.context.delete(lastRecord)
         CoreDataManager.shared.save(context: self.context)
         
-        return true
+        return ActionResult.success(true)
     }
     
 }

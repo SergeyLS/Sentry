@@ -48,15 +48,18 @@ class ViewController: UIViewController {
     
     
     @IBAction func deleteUserButtonAction(_ sender: UIButton) {
-        let isDelete = userService.deleteLastUser()
-        print(isDelete)
+        let deleteRezult = userService.deleteLastUser()
+        print(deleteRezult)
+    }
+    
+    @IBAction func printNormalButtonAction(_ sender: UIButton) {
+        myPrint("test", call: self)
     }
     
     
-    @IBAction func testPrintButtonAction(_ sender: UIButton) {
-        myPrint(text: "test")
+    @IBAction func printErrorButtonAction(_ sender: UIButton) {
+        myPrint("test", call: self, kind: .error)
     }
-    
     
     
 }
