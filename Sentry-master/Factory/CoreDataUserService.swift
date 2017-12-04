@@ -11,7 +11,6 @@ import CoreData
 
 class CoreDataUserService: UserService  {
     
-    
     private let context = CoreDataManager.shared.viewContext
     init() { }
     
@@ -30,15 +29,18 @@ class CoreDataUserService: UserService  {
         return resultsArray.count
     }
     
-    func createUser(withName name: String, withId id: Int) -> UserProtocol? {
-        guard let newUser = User(entityName: User.type, moc: self.context) else { return nil }
+    func createUser(withName name: String, withId id: Int, completion: @escaping (Error?, UserProtocol?) -> Void) {
+        guard let newUser = User(entityName: User.type, moc: self.context) else {
+            completion(ErrorsCoreData.noName, nil)
+            return
+        }
         newUser.name = name
         newUser.id = NSNumber(integerLiteral: id)
         CoreDataManager.shared.save(context: self.context)
         
-        return newUser
-        
+        completion(nil, newUser)
     }
+    
     
     func findUser(withId id: Int) -> UserProtocol? {
         

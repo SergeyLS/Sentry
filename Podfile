@@ -7,4 +7,9 @@ target 'Sentry-master' do
 
   pod 'Sentry'
 
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  
+
 end

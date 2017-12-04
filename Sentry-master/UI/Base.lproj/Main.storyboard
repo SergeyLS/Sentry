@@ -37,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyK-aN-MPT">
                                 <rect key="frame" x="20" y="140" width="335" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Add user"/>
+                                <state key="normal" title="Add user CoreData"/>
                                 <connections>
                                     <action selector="addUserButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9z9-qK-bR7"/>
                                 </connections>
@@ -45,7 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyz-Br-Srn">
                                 <rect key="frame" x="20" y="190" width="335" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Delete user"/>
+                                <state key="normal" title="Delete user CoreData"/>
                                 <connections>
                                     <action selector="deleteUserButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yAw-Q3-E5U"/>
                                 </connections>
@@ -66,6 +66,14 @@
                                     <action selector="printErrorButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hy-I3-Y6n"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ele-XT-gt9">
+                                <rect key="frame" x="10" y="340" width="355" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Add user Firestore"/>
+                                <connections>
+                                    <action selector="addUserFirestoreButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRo-Ld-DWS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -78,12 +86,15 @@
                             <constraint firstItem="rvJ-OH-1eA" firstAttribute="top" secondItem="FuU-3u-MNM" secondAttribute="bottom" constant="20" id="IMo-dX-f6o"/>
                             <constraint firstItem="raY-3z-gJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ItL-Zk-wcg"/>
                             <constraint firstItem="raY-3z-gJe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JUR-CR-gMc"/>
+                            <constraint firstItem="ele-XT-gt9" firstAttribute="top" secondItem="rvJ-OH-1eA" secondAttribute="bottom" constant="20" id="Kv2-4J-ZmO"/>
                             <constraint firstItem="SPO-U7-O51" firstAttribute="width" secondItem="raY-3z-gJe" secondAttribute="width" id="LIC-EV-eIs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPO-U7-O51" secondAttribute="trailing" constant="20" id="P0d-It-Kxr"/>
                             <constraint firstItem="Cyz-Br-Srn" firstAttribute="top" secondItem="SyK-aN-MPT" secondAttribute="bottom" constant="20" id="QVE-Og-9C1"/>
                             <constraint firstItem="rvJ-OH-1eA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZcY-kc-Xl2"/>
                             <constraint firstItem="SyK-aN-MPT" firstAttribute="width" secondItem="raY-3z-gJe" secondAttribute="width" id="dRS-Vg-SVr"/>
+                            <constraint firstItem="ele-XT-gt9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fPy-TE-4gc"/>
                             <constraint firstItem="SyK-aN-MPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gfK-py-IHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ele-XT-gt9" secondAttribute="trailing" constant="10" id="jrF-3c-lZO"/>
                             <constraint firstItem="Cyz-Br-Srn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kUd-cy-Ns3"/>
                             <constraint firstItem="FuU-3u-MNM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m75-tM-pu3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="raY-3z-gJe" secondAttribute="trailing" constant="20" id="mqn-Ys-ZWm"/>

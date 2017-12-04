@@ -8,6 +8,7 @@
 
 import UIKit
 import Sentry
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // Create a Sentry client and start crash handler
-        // MARK: Строковый литерал - выносим в Constants(или подобную реализацию) или info.plist (для таких вещей как пароль - идеальный вариант второй + добавлять данный .plist в .gitignore, чтобы приватный пароль не гулял по репозиторию. Пока вынес в Constants
+        //Sentry
         do {
             Client.shared = try Client(dsn: Constants.Sentry.dsn)
             try Client.shared?.startCrashHandler()
@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("\(error)")
             // Wrong DSN or KSCrash not installed
         }
+        
+        //FirebaseApp
+        FirebaseApp.configure()
         
         return true
     }

@@ -19,9 +19,14 @@ class UserServiceFactory {
     //==================================================
     // MARK: - Method(s)
     //==================================================
-    func createUserService() -> UserService {
-        // For CoreData
-        return CoreDataUserService()
+    func createUserService(kindService: KindService) -> UserService {
+        
+        switch kindService {
+        case .coreData:
+            return CoreDataUserService()
+        case .firestore:
+            return FirestoreUserService()
+        }
     }
     
 }

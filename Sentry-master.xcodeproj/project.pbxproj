@@ -26,6 +26,11 @@
 		F736EFBB1FC4C8F400DF3768 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EFB81FC4C8F400DF3768 /* User+CoreDataProperties.swift */; };
 		F736EFBC1FC4C8F400DF3768 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */; };
 		F736EFBF1FC4C92400DF3768 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F736EFBD1FC4C92400DF3768 /* Model.xcdatamodeld */; };
+		F765BF2E1FD545A00056C6C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F765BF2D1FD545A00056C6C1 /* GoogleService-Info.plist */; };
+		F765BF301FD55DB00056C6C1 /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765BF2F1FD55DB00056C6C1 /* FirestoreModel.swift */; };
+		F765BF321FD5626E0056C6C1 /* FirestoreUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765BF311FD5626E0056C6C1 /* FirestoreUserService.swift */; };
+		F765BF351FD566430056C6C1 /* UserFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765BF341FD566430056C6C1 /* UserFirestore.swift */; };
+		F765BF371FD571510056C6C1 /* KindService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F765BF361FD571510056C6C1 /* KindService.swift */; };
 		F769117D1FC4C01C002CBCD3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */; };
 		F777C41E1FCCBD0A005EB013 /* CoreDataUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,11 @@
 		F736EFB81FC4C8F400DF3768 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F736EFBE1FC4C92400DF3768 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F765BF2D1FD545A00056C6C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F765BF2F1FD55DB00056C6C1 /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
+		F765BF311FD5626E0056C6C1 /* FirestoreUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserService.swift; sourceTree = "<group>"; };
+		F765BF341FD566430056C6C1 /* UserFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirestore.swift; sourceTree = "<group>"; };
+		F765BF361FD571510056C6C1 /* KindService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindService.swift; sourceTree = "<group>"; };
 		F769117C1FC4C01C002CBCD3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				F736EFB61FC4C8DE00DF3768 /* CoreData */,
+				F765BF331FD566250056C6C1 /* Firestore */,
 				B728BD361FCD5EA60074D4E0 /* UserProtocol.swift */,
+				F765BF2F1FD55DB00056C6C1 /* FirestoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +167,7 @@
 		F7023DCB1FC469220069041C /* Sentry-master */ = {
 			isa = PBXGroup;
 			children = (
+				F765BF2D1FD545A00056C6C1 /* GoogleService-Info.plist */,
 				B79E32411FC5DB1E0020CD20 /* Model */,
 				F7127AAE1FC81CBE00BE2087 /* Factory */,
 				B79E32401FC5DB110020CD20 /* Service */,
@@ -180,8 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				F7127AAC1FC81C8800BE2087 /* UserService.swift */,
+				F765BF361FD571510056C6C1 /* KindService.swift */,
 				F7127AAF1FC81CF300BE2087 /* UserServiceFactory.swift */,
 				F777C41D1FCCBD0A005EB013 /* CoreDataUserService.swift */,
+				F765BF311FD5626E0056C6C1 /* FirestoreUserService.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -195,6 +210,14 @@
 				F736EFB91FC4C8F400DF3768 /* Item+CoreDataProperties.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F765BF331FD566250056C6C1 /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				F765BF341FD566430056C6C1 /* UserFirestore.swift */,
+			);
+			path = Firestore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7023DD71FC469220069041C /* LaunchScreen.storyboard in Resources */,
+				F765BF2E1FD545A00056C6C1 /* GoogleService-Info.plist in Resources */,
 				F7023DD41FC469220069041C /* Assets.xcassets in Resources */,
 				F7023DD21FC469220069041C /* Main.storyboard in Resources */,
 			);
@@ -290,13 +314,33 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sentry-master/Pods-Sentry-master-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSCrash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -328,16 +372,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F765BF321FD5626E0056C6C1 /* FirestoreUserService.swift in Sources */,
 				F7023DCF1FC469220069041C /* ViewController.swift in Sources */,
 				F70CE15D1FD1485B00C541AB /* ActionResult.swift in Sources */,
 				F7023DCD1FC469220069041C /* AppDelegate.swift in Sources */,
 				F736EFBB1FC4C8F400DF3768 /* User+CoreDataProperties.swift in Sources */,
 				F736EFB51FC4C48600DF3768 /* User+CoreDataClass.swift in Sources */,
+				F765BF301FD55DB00056C6C1 /* FirestoreModel.swift in Sources */,
+				F765BF371FD571510056C6C1 /* KindService.swift in Sources */,
 				F70CE1601FD148FD00C541AB /* MyPrintKind.swift in Sources */,
 				F769117D1FC4C01C002CBCD3 /* CoreDataManager.swift in Sources */,
 				F7127AB01FC81CF300BE2087 /* UserServiceFactory.swift in Sources */,
 				F736EFBF1FC4C92400DF3768 /* Model.xcdatamodeld in Sources */,
 				F777C41E1FCCBD0A005EB013 /* CoreDataUserService.swift in Sources */,
+				F765BF351FD566430056C6C1 /* UserFirestore.swift in Sources */,
 				B728BD371FCD5EA60074D4E0 /* UserProtocol.swift in Sources */,
 				F7127AAD1FC81C8800BE2087 /* UserService.swift in Sources */,
 				F70CE1621FD14F7100C541AB /* ErrorsCoreData.swift in Sources */,

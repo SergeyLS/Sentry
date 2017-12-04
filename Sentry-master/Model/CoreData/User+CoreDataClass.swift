@@ -8,10 +8,11 @@
 
 import Foundation
 import CoreData
+import FirebaseFirestore
 
 public class User: NSManagedObject {
     
-     static let type = "User"
+    static let type = "User"
     
     convenience init? (entityName: String, moc: NSManagedObjectContext = CoreDataManager.shared.viewContext) {
         guard let tempEntity = NSEntityDescription.entity(forEntityName: entityName, in: moc) else {
@@ -45,3 +46,4 @@ extension User: UserProtocol {
         }
     }
 }
+
