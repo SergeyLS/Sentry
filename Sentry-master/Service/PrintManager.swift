@@ -9,25 +9,23 @@
 import Foundation
 
 
-func myPrint(_ text: String, call: Any? = nil, kind: MyPrintKind = .normal) {
+func myPrint(_ text: String, call: Any? = nil, kind: MyPrintKind = .message) {
     
-   // CallStackAnalyser.classAndMethodForStackSymbol(Thread.callStackSymbols()[2])
-//       for symbol in Thread.callStackSymbols {
-//            print(symbol)
-//        }
+    // MARK: Думаю назвать лучше caller, type вместо call и kind
+    // MARK: Чтобы не передавать call или caller все время, возможно лучше воспользоваться: "\(#file.lastPathComponent):\(#line) : \(#function)"
     
-    var rezult = ""
-    
+    var result = ""
+
     if let call = call {
-        let callType = type(of: call)
-        rezult += "[\(callType)] "
+        result += "[\(type(of: call))] "
     }
+
+    result += text
     
-    rezult += text
-    
-    if kind == .error || kind == .warning {
-        NSLog(rezult)
-    } else {
-        print(rezult)
+    switch kind {
+    case .warning, .error:
+        NSLog(result)
+    case .message:
+        print(result)
     }
 }

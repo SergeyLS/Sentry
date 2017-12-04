@@ -10,5 +10,5 @@
 enum MyPrintKind {
     case warning
     case error
-    case normal
+    case message
 }
